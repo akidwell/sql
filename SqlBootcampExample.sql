@@ -27,4 +27,17 @@ Insert Customer (Name, City, State, Sales, Active)
     ('Super Cool Computers', 'Cincy', 'OH', 887878787, 1),
     ('Target', 'Cincy', 'OH', 4647584, 1);
     
+    CREATE TABLE State (
+	code nvarchar(2) not null primary key,
+    name nvarchar(50) not null
+);
+
+insert State (code, name) values ('AL','Alabama');
+insert State (code, name) values ('CA','California');
+insert State (code, name) values ('HI','Hawaii');
+insert State (code, name) values ('NJ','New Jersey');
+insert State (code, name) values ('NV','Nevada');
+insert State (code, name) values ('Oh','Ohio');
+insert State (code, name) values ('TX','Texas');
+insert State (code, name) values ('WA','Washington')
     
