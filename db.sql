@@ -23,6 +23,6 @@ CREATE TABLE Transactions (
 );
 
 Insert Transactions (Amount, TXN_Type, Account_ID) Values (500,'Deposit', 3);
-Insert Transactions (Amount, TXN_Type, Account_ID) Values ((200),'Withdraw', 4);
+Insert Transactions (Amount, TXN_Type, Account_ID) Values ((-200),'Withdraw', 4);
 Insert Transactions (Amount, TXN_Type, Account_ID) Values (200,'deposit', 4);
 Insert Transactions (Amount, TXN_Type, Account_ID) Values (248,'deposit', 1);

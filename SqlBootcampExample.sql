@@ -40,4 +40,3 @@ insert State (code, name) values ('NV','Nevada');
 insert State (code, name) values ('Oh','Ohio');
 insert State (code, name) values ('TX','Texas');
 insert State (code, name) values ('WA','Washington')
-    

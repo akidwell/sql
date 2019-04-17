@@ -1,0 +1,4 @@
+SELECT Name as 'Contact Name', 
+	concat(city, ', ', state) as 'Location', 
+	concat('$', format(sales,2)) as 'Sales'
+FROM customer;
