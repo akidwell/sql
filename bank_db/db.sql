@@ -19,7 +19,8 @@ CREATE TABLE Transactions (
 	ID int not null primary key auto_increment,
 	Amount decimal(9,2) not null,
 	TXN_Type nvarchar(50) not null,
-	Account_ID nvarchar(2) not null
+	Account_ID int not null,
+    Foreign KEY (Account_ID) References accounts(id)
 );
 
 Insert Transactions (Amount, TXN_Type, Account_ID) Values (500,'Deposit', 3);
