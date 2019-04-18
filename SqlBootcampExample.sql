@@ -2,13 +2,28 @@ DROP DATABASE IF EXISTS SqlBootcampExample;
 CREATE DATABASE SqlBootcampExample;
 use SqlBootcampExample;
 
+   CREATE TABLE State (
+	code nvarchar(2) not null primary key,
+    name nvarchar(50) not null
+);
+
+insert State (code, name) values ('AL','Alabama');
+insert State (code, name) values ('CA','California');
+insert State (code, name) values ('HI','Hawaii');
+insert State (code, name) values ('NJ','New Jersey');
+insert State (code, name) values ('NV','Nevada');
+insert State (code, name) values ('Oh','Ohio');
+insert State (code, name) values ('TX','Texas');
+insert State (code, name) values ('WA','Washington');
+
 CREATE TABLE Customer (
 	ID int not null primary key auto_increment,
 	Name nvarchar(50) not null,
 	City nvarchar(50) not null,
 	State nvarchar(2) not null,
 	Sales decimal(18,0) not null,
-	Active bit not null
+	Active bit not null,
+ Foreign KEY (state) References State(code)
 );
 
 Insert Customer (Name, City, State, Sales, Active) Values ('Acme, inc.','Jersey City','NJ',14381891,1);
@@ -27,16 +42,5 @@ Insert Customer (Name, City, State, Sales, Active)
     ('Super Cool Computers', 'Cincy', 'OH', 887878787, 1),
     ('Target', 'Cincy', 'OH', 4647584, 1);
     
-    CREATE TABLE State (
-	code nvarchar(2) not null primary key,
-    name nvarchar(50) not null
-);
-
-insert State (code, name) values ('AL','Alabama');
-insert State (code, name) values ('CA','California');
-insert State (code, name) values ('HI','Hawaii');
-insert State (code, name) values ('NJ','New Jersey');
-insert State (code, name) values ('NV','Nevada');
-insert State (code, name) values ('Oh','Ohio');
-insert State (code, name) values ('TX','Texas');
-insert State (code, name) values ('WA','Washington')
+    
+    
