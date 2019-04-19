@@ -24,7 +24,8 @@ Order by LastName;
         
         
 -- concat and inner join
-SELECT CONCAT(Firstname, lastname) as 'Name' from actor, c.ROLE, m.title 
+SELECT CONCAT(Firstname, lastname) as 'Name', C.ROLE, m.title 
+from Actor A
 inner join
 Credit C
 inner join
